@@ -1,0 +1,28 @@
+runs:
+- args: 201 10 4
+  bin: poisson_test
+  cmd: all
+  git_ref: reorder
+  name: Test
+  test: Cachegrind
+- args: 801 100 4
+  bin: poisson_test
+  cmd: all
+  git_ref: threading
+  name: Time Reorder
+  test: Time
+- args: []
+  bin: poisson_test
+  cmd: timed_test
+  git_ref: 2343ks
+  name: Test3
+  test: Time
+- args:
+  - 101 100 4
+  - 201 100 4
+  - 301 100 4
+  bin: poisson_test
+  cmd: timed_test
+  git_ref: shafucku
+  name: other
+  test: Time
